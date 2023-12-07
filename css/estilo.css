@@ -77,6 +77,10 @@ main .tabla {
   max-width: 800px;
   margin: 20px auto;
 }
+main .carruselPropio {
+  max-width: 600px;
+  margin: 20px auto;
+}
 
 .galeria {
   display: flex;
