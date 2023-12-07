@@ -1,0 +1,97 @@
+.contenedor{
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "pie pie";
+    .aside{
+        grid-area: aside;
+        background-color: gray;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .logoAside{
+            align-self: center;
+            margin: 1rem;
+            width: 150px;
+        }
+    }
+    .header{
+        grid-area: header;
+        
+    }
+    .main{
+        grid-area: main;
+    }
+    .pie{
+        grid-area: pie;
+    }
+}
+@media screen and (max-width: 768px){
+    footer{
+        .menu{
+            flex-direction: column;
+       
+            height: auto;
+            text-align: center;
+            li{
+                a{
+                    padding: 5px;
+                    margin: 5px;
+                  
+                } 
+            }
+           
+        }
+    }
+   
+    .contenedor{
+        
+        width: 100vw;
+        
+        grid-template-columns:  1fr;
+        grid-template-rows: auto 3fr auto auto;
+        grid-template-areas: 
+        "header"
+        "main" 
+        "aside"
+        "pie";
+    }
+}
+@media screen and (max-width: 480px){
+    footer{
+    .menu{
+        background-color: black;
+        li{
+            a{
+                padding: 5px;
+                margin: 5px;
+                color: white;
+                &:hover{
+                    color: black;
+                    background-color: white;
+                    border-radius: 20px;
+                }
+            } 
+        }
+       
+    }
+}
+   
+    .galeria {
+        .img{
+        width: 250px;
+        height: 150px;
+    }
+    h5{
+        font-size: small;
+    }
+}
+   
+
+}

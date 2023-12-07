@@ -1,268 +1,226 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
-body{
-    background-color: black;
-    font-family: 'Englebert', cursive;
-}
-nav{
-    padding: 20px;
-    
-}
-.logo{
-    width: 60px;
-    align-items: center;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #000000;
+  font-family: "Englebert", cursive;
+}
 
-.menu{
-    
-    
-    display: flex;
-    height: 120px;
-    background-color: white;
-    list-style: none;
-    margin: 10px;
-    text-align: center;
-    align-items: center;
-    
+header nav {
+  padding: 20px;
 }
-.menu li{
-    display: inline-block;
+header nav div .logo {
+  width: 60px;
+  align-items: center;
 }
-.menu .logo{
-    
-    width: 100px;
+header .colorPropio {
+  margin: 10px auto;
+  padding: 10px;
+  background-color: white;
+}
+header h1 {
+  text-align: center;
+  color: aliceblue;
+  margin: 2rem;
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+
+main h1 {
+  text-align: center;
+  color: aliceblue;
+  margin: 2rem;
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+main h2 {
+  text-align: center;
+  color: #f0f8ff;
+}
+main h5 {
+  text-align: center;
+  color: #f0f8ff;
+}
+main p {
+  color: #f0f8ff;
+  padding: 20px;
+  line-height: 1.5;
+  font-size: 1.2;
+}
+main .principal {
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+main .formulario {
+  background-color: #f0f8ff;
+  max-width: 500px;
+  margin: 20px auto;
+  border: orange solid 2px;
+  padding: 1rem;
+}
+main .accordion {
+  max-width: 600px;
+  margin: 20px auto;
+}
+main .accordion .mercado {
+  width: 75px;
+}
+main .tabla {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.galeria .img {
+  width: 350px;
+  height: 200px;
+  margin: 10px;
+  border: double #f0f8ff 2px;
+  opacity: 0.5;
+}
+.galeria .img:hover {
+  opacity: 1;
+  border: #f0f8ff solid 5px;
+  border-radius: 20px;
+  transform: scale(1.13, 1.13);
+}
+
+footer {
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+footer .Redes {
+  text-align: center;
+}
+footer .Redes a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+footer img {
+  width: 35px;
+}
+footer .txtpie {
+  text-align: center;
+}
+footer h3 {
+  color: #f0f8ff;
+}
+footer p {
+  color: #f0f8ff;
+}
+footer .menu {
+  display: flex;
+  height: 120px;
+  background-color: white;
+  list-style: none;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+}
+footer .menu li {
+  display: inline-block;
+}
+footer .menu li a {
+  padding: 20px;
+  margin: 10px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+footer .menu li a:hover {
+  color: #f0f8ff;
+  background-color: black;
+  border-radius: 20px;
+}
+footer .menu .logo {
+  width: 100px;
+  height: auto;
+}
+
+.contenedor {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto 3fr auto;
+  grid-template-areas: "header header" "main aside" "pie pie";
+}
+.contenedor .aside {
+  grid-area: aside;
+  background-color: gray;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contenedor .aside .logoAside {
+  align-self: center;
+  margin: 1rem;
+  width: 150px;
+}
+.contenedor .header {
+  grid-area: header;
+}
+.contenedor .main {
+  grid-area: main;
+}
+.contenedor .pie {
+  grid-area: pie;
+}
+
+@media screen and (max-width: 768px) {
+  footer .menu {
+    flex-direction: column;
     height: auto;
+    text-align: center;
+  }
+  footer .menu li a {
+    padding: 5px;
+    margin: 5px;
+  }
+  .contenedor {
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3fr auto auto;
+    grid-template-areas: "header" "main" "aside" "pie";
+  }
 }
-.menu li a{
-    padding: 20px;
-    margin: 10px;
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-}
-.menu li a:hover{
-    color: aliceblue;
+@media screen and (max-width: 480px) {
+  footer .menu {
     background-color: black;
-    border-radius: 20px;
-}
-.colorPropio{
-    margin: 10px auto;
-    padding: 10px;
+  }
+  footer .menu li a {
+    padding: 5px;
+    margin: 5px;
+    color: white;
+  }
+  footer .menu li a:hover {
+    color: black;
     background-color: white;
-}
-
-h1{
-    text-align: center;
-    color: aliceblue;
-    margin: 2rem;
-    font-weight: normal;
-    font-size: 2.5rem;
-}
-h2{
-    text-align: center;
-    color: aliceblue;
-}
-h5{
-    text-align: center;
-    color: aliceblue;
-}
-p{
-    color: aliceblue;
-    padding: 20px;
-    line-height: 1.5;
-    font-size: 1.2;
-}
-.principal{
-    width: 100%;
-    max-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;
-}
-.galeria{
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-
-.galeria .img{
-    width: 350px;
-    height: 200px;
-    margin: 10px;
-    border: double aliceblue 2px;
-    opacity: 0.5;
-}
-.galeria img:hover{
-    opacity: 1;
-    border: antiquewhite solid 5px;
     border-radius: 20px;
-}
-.formulario{
-    background-color: antiquewhite;
-    max-width: 500px;
-    margin: 20px auto;
-    border: orange solid 2px;
-    padding: 1rem;
-}
-.boton{
-    text-align: center;
-    background-color:burlywood;
-    padding: 1rem 1rem;
-    margin-top: 1rem;
-    border-radius: 20px;
-    width: 100%;
-    border: 2px solid black;
-    opacity: 0.5;
-}
-.boton:hover{
-    cursor: pointer;
-    opacity: 1;
+  }
+  .galeria .img {
+    width: 250px;
+    height: 150px;
+  }
+  .galeria h5 {
+    font-size: small;
+  }
 }
 
-.pie{
-    display: flex;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-    flex-direction: column;
-    grid-area: pie;
-}
-.pie .Redes{
-    text-align: center;
-
-}
-.pie .Redes a{
-    margin-left: 1rem;
-    margin-right: 1rem;
-    text-decoration: none;
-}
-.pie img{
-    width: 35px;
-}
-.txtpie{
-    text-align: center;
-}
-.pie h3{
-    color: aliceblue;
-
-}
-
-.contenedor{
-    margin: auto;
-    width: 90%;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto 3fr auto;
-    grid-template-areas: 
-    "header header"
-    "main aside"
-    "pie pie";
-}
-.header{
-    grid-area: header;
-    
-}
-.main{
-    grid-area: main;
-}
-.main .texto{
-    padding: 1rem;
-    display: flex;
-}
-.main .texto p{
-    padding: 1rem;
-    line-height: 1.5;
-}
-.aside{
-    grid-area: aside;
-    background-color: gray;
-    padding: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-.aside .logoAside{
-    align-self: center;
-    margin: 1rem;
-    width: 150px;
-}
-.carruselPropio{
-    
-    margin: 20px auto;
-}
-.accordion{
-    max-width: 600px;
-    margin: 20px auto;
-}
-.mercado{
-    width: 75px;
-}
-.tabla{
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-
-
-@media screen and (max-width: 768px){
-    .menu{
-        flex-direction: column;
-       
-        height: auto;
-        text-align: center;
-    }
-    .menu li a{
-        margin: 5px;
-        padding: 5px;
-    }
-    .contenedor{
-        
-        width: 100vw;
-        
-        grid-template-columns:  1fr;
-        grid-template-rows: auto 3fr auto auto;
-        grid-template-areas: 
-        "header"
-        "main" 
-        "aside"
-        "pie";
-    }
-}
-@media screen and (max-width: 480px){
-    .menu{
-        background-color: black;
-       
-    }
-    .menu li a{
-        padding: 5px;
-        margin: 5px;
-        color: white;
-    }
-    .menu li a:hover{
-        color: black;
-        background-color: white;
-        border-radius: 20px;
-    }
-    .galeria .img{
-        width: 250px;
-        height: 150px;
-        
-    }
-    .galeria h5{
-        font-size: small;
-    }
-    .main .texto{
-        flex-direction: column;
-    }
-}
+/*# sourceMappingURL=estilo.css.map */

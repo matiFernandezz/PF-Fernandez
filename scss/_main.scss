@@ -1,0 +1,71 @@
+$colorLetra: #f0f8ff;
+main{
+    h1{
+        text-align: center;
+        color: aliceblue;
+        margin: 2rem;
+        font-weight: normal;
+        font-size: 2.5rem;
+    }
+    h2{
+        text-align: center;
+        color: $colorLetra;
+    }
+    h5{
+        text-align: center;
+        color: $colorLetra;
+    }
+    p{
+        color: $colorLetra;
+        padding: 20px;
+        line-height: 1.5;
+        font-size: 1.2;
+    }
+    .principal{
+        width: 100%;
+        max-height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+    }
+    .formulario{
+        background-color: $colorLetra;
+        max-width: 500px;
+        margin: 20px auto;
+        border: orange solid 2px;
+        padding: 1rem;
+    }
+    .accordion{
+        max-width: 600px;
+        margin: 20px auto;
+        .mercado{
+            width: 75px;
+        }
+    }
+    .tabla{
+        max-width: 800px;
+        margin: 20px auto;
+    }
+}
+.galeria{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .img{
+        width: 350px;
+        height: 200px;
+        margin: 10px;
+        border: double $colorLetra 2px;
+        opacity: 0.5;
+        
+        &:hover{
+            opacity: 1;
+            border: $colorLetra solid 5px;
+            border-radius: 20px;
+            transform: scale(1.13,1.13);
+        }
+        }
+    }
