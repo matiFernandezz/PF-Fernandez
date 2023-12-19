@@ -50,6 +50,10 @@ main p {
   line-height: 1.5;
   font-size: 1.2;
 }
+main .propio{
+  margin: auto;
+  padding: 0;
+}
 main .principal {
   width: 100%;
   max-height: 100vh;
